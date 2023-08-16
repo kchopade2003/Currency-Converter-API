@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style>
+        .high{
+            height: 100vh;
+        }
+
+        .container{
+            margin-top: 200px;
+        }
+
+        .back{
+            padding: 10px;
+            background-color: blue;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="max-w-full mx-4 py-6 sm:mx-auto sm:px-6 lg:px-8 dark:bg-slate-800 high">
+        <div class="sm:flex sm:space-x-4 container">
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                <div class="bg-white p-5">
+                    <div class="sm:flex sm:items-start">
+                        <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                            <h3 class="text-sm leading-6 font-medium text-gray-400">{{ from_currency }}</h3>
+                            <p class="text-3xl font-bold text-black">{{ amount }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow transform transition-all mb-4 w-full sm:w-1/3 sm:my-8">
+                <div class="bg-white p-5">
+                    <div class="sm:flex sm:items-start">
+                        <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
+                            <h3 class="text-sm leading-6 font-medium text-gray-400">{{ to_currency }}</h3>
+                            <p class="text-3xl font-bold text-black">{{ converted_amount }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <a href="/">Go back</a>
+        </div>
+    </div>
+</body>
+</html>
